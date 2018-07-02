@@ -68,9 +68,10 @@ WHERE first_name = 'GROUCHO'  AND last_name= 'WILLIAMS';
 
 -- * 6a. Use `JOIN` to display the first and last names, as well as the address, of each staff member. Use the tables `staff` and `address`:
  
-SELECT address_id, first_name, last_name
-FROM 
-INNER JOIN authors ON books.authorId = authors.id;
+SELECT staff.address_id, staff.first_name, staff.last_name
+FROM staff
+INNER JOIN address on address.address_id=staff.address_Id;
+
 
 
 
